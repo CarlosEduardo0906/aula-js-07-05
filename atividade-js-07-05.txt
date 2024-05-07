@@ -1,0 +1,54 @@
+class Usuario {
+    #senha = "";
+    #login = "";
+    #nome = "";
+     constructor(nome,login,senha){
+        this.#nome = nome;
+        this.#senha = senha;
+        this.#login = login;
+    }
+    get nome(){
+        return this.#nome;
+    }
+    set nome(nome){
+        this.#nome = nome;
+    }
+    get login(){
+        return this.#login;
+    }
+    set login(login){
+        this.#login
+    }
+    get senha(){
+        return this.#senha;
+    }
+    set senha(senha){
+        this.#senha
+    }
+}
+/*
+let usr = new Usuario("Pedro",123);
+usr.nome = "Paulo";
+console.log("Nome:"+usr.nome);
+console.log("Senha:"+usr.senha);
+*/
+
+function cadastrar(){
+let vetor = []
+let nome = ""
+let login = ""
+let senha = ""
+let i = 0
+for (i = 0; i<3; ++i){
+    nome = prompt("Digite seu nome :")
+    login = prompt("Digite seu login :")
+    senha = prompt("Digite sua senha :")
+    vetor.push(new Usuario(nome,login,senha))
+}
+for (i = 0; i<3;++i){
+    console.log("Nome: " + vetor[i].nome)
+    console.log("Login: " + vetor[i].login)
+    console.log("Senha: " + vetor[i].senha)
+}
+}
+cadastrar()
